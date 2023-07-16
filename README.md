@@ -66,4 +66,8 @@ pnpm run preview
 yarn preview
 ```
 
+## Reference
+https://dev.classmethod.jp/articles/collaborative-editing-with-tiptap-nuxt/
+
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
