@@ -2,6 +2,12 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+start websocket server
+```bash
+HOST=localhost PORT=1234 npx y-websocket
+```
+
+
 ## Setup
 
 Make sure to install the dependencies:
