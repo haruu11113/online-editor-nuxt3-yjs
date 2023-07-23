@@ -2,6 +2,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
-    baseURL: '/online-editor-nuxt3-yjs/'
+    baseURL: process.env.BASE_URL
   },
 })
