@@ -3,13 +3,15 @@
   "private": true,
   "scripts": {
     "build": "npx nuxi build",
-    "dev": "npx nuxi dev", "generate": "npx nuxi generate",
+    "dev": "npx nuxi dev",
+    "generate": "npx nuxi generate",
     "preview": "npx nuxi preview",
     "postinstall": "npx nuxi prepare"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@types/node": "^18.16.19",
+    "@vueuse/core": "^10.2.1",
     "nuxt": "^3.6.5"
   },
   "dependencies": {
@@ -19,6 +21,7 @@
     "@tiptap/starter-kit": "^2.0.3",
     "@tiptap/vue-3": "^2.0.3",
     "sass": "^1.64.0",
+    "ws": "^8.13.0",
     "y-prosemirror": "^1.0.1",
     "y-websocket": "^1.5.0",
     "yjs": "^13.6.6"
