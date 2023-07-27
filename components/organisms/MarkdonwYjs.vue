@@ -1,7 +1,14 @@
 <template>
-  makrdonw yjs
-  <editor-content :editor="editor" @input="onEdit" />
-  <div v-html="output"></div>
+  <v-container>
+    <v-row style="height: 500px">
+      <v-col cols="6" style="height: 100vh">
+        <editor-content :editor="editor" @input="onEdit" style="height: 100vh" />
+      </v-col>
+      <v-col cols="6">
+        <div v-html="output"></div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -18,7 +25,6 @@ export default {
   components: {
     EditorContent,
   },
-
   data() {
     return {
       editor: null,
@@ -27,11 +33,9 @@ export default {
       text: "",
     }
   },
-
   mounted() {
     const ydoc = new Y.Doc()
     this.provider = new WebsocketProvider("ws://localhost:1234", "sample-document", ydoc)
-
     this.editor = new Editor({
       content: "",
       extensions: [
@@ -46,12 +50,10 @@ export default {
       ],
     })
   },
-
   beforeDestroy() {
     this.editor.destroy()
     this.provider.destroy()
   },
-
   methods: {
     onEdit(e) {
       console.log(e.target.innerText)
@@ -66,33 +68,7 @@ export default {
     },
 
     getRandomName() {
-      const list = [
-        "Lea Thompson",
-        "Cyndi Lauper",
-        "Tom Cruise",
-        "Madonna",
-        "Jerry Hall",
-        "Joan Collins",
-        "Winona Ryder",
-        "Christina Applegate",
-        "Alyssa Milano",
-        "Molly Ringwald",
-        "Ally Sheedy",
-        "Debbie Harry",
-        "Olivia Newton-John",
-        "Elton John",
-        "Michael J. Fox",
-        "Axl Rose",
-        "Emilio Estevez",
-        "Ralph Macchio",
-        "Rob Lowe",
-        "Jennifer Grey",
-        "Mickey Rourke",
-        "John Cusack",
-        "Matthew Broderick",
-        "Justine Bateman",
-        "Lisa Bonet",
-      ]
+      const list = ["Lea Thompson", "Cyndi Lauper", "Tom Cruise", "Madonna", "Jerry Hall"]
       return list[Math.floor(Math.random() * list.length)]
     },
   },
