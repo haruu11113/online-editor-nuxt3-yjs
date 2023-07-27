@@ -1,15 +1,12 @@
 <template>
   <div>
+    index
     <WsEditor />
   </div>
 </template>
 
 <script lang="ts" setup>
-import WsEditor from '~/components/organisms/WsEditor.vue'
 definePageMeta({
-  layout: 'default',
-  components: {
-    WsEditor,
-  },
+  layout: "default",
 })
 </script>

@@ -1,0 +1,12 @@
+{
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": true,
+  "javascript.suggest.completeJSDocs": false,
+  // formatter
+  "editor.formatOnSave": true, // ファイル保存時の自動フォーマット有効
+  "editor.formatOnPaste": true, // ペーストした文字の自動フォーマット有効
+  "editor.formatOnType": true, // 文字入力行の自動フォーマット有効
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // デフォルトフォーマッターをPrettierに指定
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true // ファイル保存時に ESLint でフォーマット
+  }
+}

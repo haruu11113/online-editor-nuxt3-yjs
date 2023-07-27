@@ -9,12 +9,12 @@
 // const onEdit = (e) => {
 //   output.value = marked(e.target.value);
 // }
-import { marked } from 'marked'
+import { marked } from "marked"
 export default {
   data() {
     return {
-      output: '',
-      text: '',
+      output: "",
+      text: "",
     }
   },
   methods: {

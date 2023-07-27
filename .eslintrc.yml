@@ -3,11 +3,13 @@ env:
   es2021: true
   node: true
 extends:
-  - plugin:vue/vue3-recommended
   - eslint:recommended
+  - plugin:vue/vue3-recommended
   - standard-with-typescript
   - plugin:@vue/prettier
   - plugin:@typescript-eslint/recommended
+  - plugin:@typescript-eslint/recommended-requiring-type-checking
+  - prettier/@typescript-eslint
   # - plugin:vue/vue3-essential
 parser: plugin:@typescript-eslint/parser
 parserOptions:
