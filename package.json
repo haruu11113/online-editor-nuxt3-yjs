@@ -6,13 +6,23 @@
     "dev": "npx nuxi dev",
     "generate": "npx nuxi generate",
     "preview": "npx nuxi preview",
-    "postinstall": "npx nuxi prepare"
+    "postinstall": "npx nuxi prepare",
+    "lint": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
+    "lintfix": "prettier --write --list-different . && npm run lint -- --fix"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@types/node": "^18.16.19",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "@vue/eslint-config-typescript": "^11.0.3",
     "@vueuse/core": "^10.2.1",
-    "nuxt": "^3.6.5"
+    "eslint": "^8.45.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "nuxt": "^3.6.5",
+    "prettier": "^3.0.0"
   },
   "dependencies": {
     "@tiptap/extension-collaboration": "^2.0.4",
@@ -20,7 +30,11 @@
     "@tiptap/pm": "^2.0.3",
     "@tiptap/starter-kit": "^2.0.3",
     "@tiptap/vue-3": "^2.0.3",
+    "marked": "^5.1.1",
+    "nuxt3-socket.io": "^0.2.0",
     "sass": "^1.64.0",
+    "socket.io": "^4.7.1",
+    "socket.io-client": "^4.7.1",
     "ws": "^8.13.0",
     "y-prosemirror": "^1.0.1",
     "y-websocket": "^1.5.0",

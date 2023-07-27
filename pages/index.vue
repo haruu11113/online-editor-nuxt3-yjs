@@ -1,17 +1,15 @@
 <template>
   <div>
-    <client-only>
-    <tiptap-editor />
-    </client-only>
+    <WsEditor />
   </div>
 </template>
 
 <script lang="ts" setup>
-    import TiptapEditor from '~/components/TiptapEditor.vue'
-    definePageMeta({
-    layout: "default",
-    components: {
-        TiptapEditor
-    }
-    });
-  </script>
+import WsEditor from '~/components/organisms/WsEditor.vue'
+definePageMeta({
+  layout: 'default',
+  components: {
+    WsEditor,
+  },
+})
+</script>

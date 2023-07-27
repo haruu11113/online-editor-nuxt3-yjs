@@ -3,13 +3,13 @@
 </template>
 
 <script>
-import { Editor, EditorContent } from "@tiptap/vue-3";
-import StarterKit from "@tiptap/starter-kit";
-import Collaboration from "@tiptap/extension-collaboration";
-import CollaborationCursor from "@tiptap/extension-collaboration-cursor";
+import { Editor, EditorContent } from '@tiptap/vue-3'
+import StarterKit from '@tiptap/starter-kit'
+import Collaboration from '@tiptap/extension-collaboration'
+import CollaborationCursor from '@tiptap/extension-collaboration-cursor'
 
-import { WebsocketProvider } from "y-websocket";
-import * as Y from "yjs";
+import { WebsocketProvider } from 'y-websocket'
+import * as Y from 'yjs'
 
 export default {
   components: {
@@ -20,19 +20,19 @@ export default {
     return {
       editor: null,
       provider: null,
-    };
+    }
   },
 
   mounted() {
-    const ydoc = new Y.Doc();
+    const ydoc = new Y.Doc()
     this.provider = new WebsocketProvider(
-      "ws://localhost:1234",
-      "sample-document",
+      'ws://localhost:1234',
+      'sample-document',
       ydoc
-    );
+    )
 
     this.editor = new Editor({
-      content: "",
+      content: '',
       extensions: [
         StarterKit,
         Collaboration.configure({
@@ -43,60 +43,60 @@ export default {
           user: { name: this.getRandomName(), color: this.getRandomColor() },
         }),
       ],
-    });
+    })
   },
 
   beforeDestroy() {
-    this.editor.destroy();
-    this.provider.destroy();
+    this.editor.destroy()
+    this.provider.destroy()
   },
 
   methods: {
     getRandomColor() {
       const list = [
-        "#958DF1",
-        "#F98181",
-        "#FBBC88",
-        "#FAF594",
-        "#70CFF8",
-        "#94FADB",
-        "#B9F18D",
-      ];
-      return list[Math.floor(Math.random() * list.length)];
+        '#958DF1',
+        '#F98181',
+        '#FBBC88',
+        '#FAF594',
+        '#70CFF8',
+        '#94FADB',
+        '#B9F18D',
+      ]
+      return list[Math.floor(Math.random() * list.length)]
     },
 
     getRandomName() {
       const list = [
-        "Lea Thompson",
-        "Cyndi Lauper",
-        "Tom Cruise",
-        "Madonna",
-        "Jerry Hall",
-        "Joan Collins",
-        "Winona Ryder",
-        "Christina Applegate",
-        "Alyssa Milano",
-        "Molly Ringwald",
-        "Ally Sheedy",
-        "Debbie Harry",
-        "Olivia Newton-John",
-        "Elton John",
-        "Michael J. Fox",
-        "Axl Rose",
-        "Emilio Estevez",
-        "Ralph Macchio",
-        "Rob Lowe",
-        "Jennifer Grey",
-        "Mickey Rourke",
-        "John Cusack",
-        "Matthew Broderick",
-        "Justine Bateman",
-        "Lisa Bonet",
-      ];
-      return list[Math.floor(Math.random() * list.length)];
+        'Lea Thompson',
+        'Cyndi Lauper',
+        'Tom Cruise',
+        'Madonna',
+        'Jerry Hall',
+        'Joan Collins',
+        'Winona Ryder',
+        'Christina Applegate',
+        'Alyssa Milano',
+        'Molly Ringwald',
+        'Ally Sheedy',
+        'Debbie Harry',
+        'Olivia Newton-John',
+        'Elton John',
+        'Michael J. Fox',
+        'Axl Rose',
+        'Emilio Estevez',
+        'Ralph Macchio',
+        'Rob Lowe',
+        'Jennifer Grey',
+        'Mickey Rourke',
+        'John Cusack',
+        'Matthew Broderick',
+        'Justine Bateman',
+        'Lisa Bonet',
+      ]
+      return list[Math.floor(Math.random() * list.length)]
     },
   },
-};
+}
 </script>
 
 <style lang="scss">
@@ -133,7 +133,7 @@ export default {
   pre {
     background: #0d0d0d;
     color: #fff;
-    font-family: "JetBrainsMono", monospace;
+    font-family: 'JetBrainsMono', monospace;
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
 
@@ -169,7 +169,7 @@ export default {
     margin: 2rem 0;
   }
 
-  ul[data-type="taskList"] {
+  ul[data-type='taskList'] {
     list-style: none;
     padding: 0;
 
