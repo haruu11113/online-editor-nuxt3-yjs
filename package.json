@@ -7,6 +7,7 @@
     "generate": "npx nuxi generate",
     "preview": "npx nuxi preview",
     "postinstall": "npx nuxi prepare",
+    "doc": "npx typedoc . docs",
     "lint": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lintfix": "prettier --write --list-different . && npm run lint -- --fix"
   },
@@ -21,8 +22,10 @@
     "eslint": "^8.45.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.15.1",
+    "jsdoc": "^4.0.2",
     "nuxt": "^3.6.5",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "typedoc": "^0.24.8"
   },
   "dependencies": {
     "@tiptap/extension-collaboration": "^2.0.4",

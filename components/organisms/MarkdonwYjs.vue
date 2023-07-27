@@ -55,6 +55,15 @@ export default {
     this.provider.destroy()
   },
   methods: {
+    /**
+     * テキストをマークダウンに変換する
+     *
+     * @remarks
+     * marked.jsを使用
+     *
+     * @param e - イベント
+     * @returns void
+     */
     onEdit(e) {
       console.log(e.target.innerText)
       const t = e.target.innerText
@@ -62,11 +71,22 @@ export default {
       // this.output = marked(e.target.value);
       // this.text = e.target.value;
     },
+    /**
+     * ランダムに色を返す
+     *
+     * @param null
+     * @returns void
+     */
     getRandomColor() {
       const list = ["#958DF1", "#F98181", "#FBBC88", "#FAF594", "#70CFF8", "#94FADB", "#B9F18D"]
       return list[Math.floor(Math.random() * list.length)]
     },
-
+    /**
+     * ランダムに名前を返す
+     *
+     * @param null
+     * @returns void
+     */
     getRandomName() {
       const list = ["Lea Thompson", "Cyndi Lauper", "Tom Cruise", "Madonna", "Jerry Hall"]
       return list[Math.floor(Math.random() * list.length)]
